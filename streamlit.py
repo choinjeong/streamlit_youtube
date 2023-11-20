@@ -7,11 +7,11 @@ df = pd.read_csv('Global YouTube Statistics.csv', encoding_errors='ignore', enco
 # 사이드바 제목
 st.sidebar.title('Global Yotube Statistics')
 
-# # 'country' 컬럼으로 select box 만들기 (selectbox/multiselect도 가능)
-# country = st.sidebar.multiselect(
-#     '유튜브 채널 국가를 선택하세요.',
-#     df['Country'].sort_values().unique().tolist()
-# )
+# 'country' 컬럼으로 select box 만들기 (selectbox/multiselect도 가능)
+country = st.sidebar.multiselect(
+    '유튜브 채널 국가를 선택하세요.',
+    df['Country'].sort_values().unique().tolist()
+)
 
 # # 'country'를 선택했을 때, 해당하는 데이터 보여주기
 # # st.table(df[df['Country'] == country].head())
