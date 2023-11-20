@@ -13,15 +13,15 @@ country = st.sidebar.multiselect(
     df['Country'].sort_values().unique().tolist()
 )
 
-# # 'country'를 선택했을 때, 해당하는 데이터 보여주기
-# # st.table(df[df['Country'] == country].head())
+# 'country'를 선택했을 때, 해당하는 데이터 보여주기
+st.table(df[df['Country'] == country].head())
 
-# # 'category' 컬럼으로 radio 만들기
-# category = st.sidebar.radio(
-#     '유튜브 채널 카테고리를 선택하세요.',
-#     df['category'].unique().tolist(),
-#     horizontal=True # False일 경우 아래로 쭉 나열 됨
-# )
+# 'category' 컬럼으로 radio 만들기
+category = st.sidebar.radio(
+    '유튜브 채널 카테고리를 선택하세요.',
+    df['category'].unique().tolist(),
+    horizontal=True # False일 경우 아래로 쭉 나열 됨
+)
 
 # # 'subscribers' 컬럼으로 slider 만들기
 # subscriber = st.sidebar.slider(
