@@ -38,8 +38,8 @@ show_button = st.sidebar.button(
 )
 
 if show_button:
-    tmp = df[df['Country'] == country]
-    tmp = tmp[tmp['category'] == category]
+    tmp = df[df['Country'] = country]
+    tmp = tmp[tmp['category'] = category]
     tmp = tmp[ (tmp['subscribers'] >= subscriber[0]) & (tmp['subscribers'] <= subscriber[1])]
     st.table(tmp.head(100)) # 100개 행 출력
     st.sidebar.success('Show the data!') # 성공 문구
