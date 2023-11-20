@@ -14,7 +14,7 @@ country = st.sidebar.multiselect(
 )
 
 # 'country'를 선택했을 때, 해당하는 데이터 보여주기
-st.table(df[df['Country'] == country].head())
+# st.table(df[df['Country'] == country].head())
 
 # 'category' 컬럼으로 radio 만들기
 category = st.sidebar.radio(
